@@ -1,10 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Guru</title>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- -------------- FAVICON ICON -------------- -->
+  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
+
+  <!-- -------------- BOXICONS -------------- -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+
+  <!-- -------------- SWIPER CSS -------------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.css" />
+
+  <!-- -------------- STYLE CSS -------------- -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- -------------- RESPONSIVE CSS -------------- -->
+  <title>Travel Guru</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <nav class="nav container">
+      <div class="logo">
+        <a href="#home"><img src="/assets/images/Logo.png" alt="Logo"></a>
+      </div>
+      <div class="nav__menu" id="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#home">
+              <i class='bx bx-home-alt nav__icon'></i>
+              <span class="nav__text">Home</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#about">
+              <i class='bx bx-user nav__icon'></i>
+              <span class="nav__text">About</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#discover">
+              <i class='bx bx-podcast nav__icon'></i>
+              <span class="nav__text">Discover</span>
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#place">
+              <i class='bx bx-current-location nav__icon'></i>
+              <span class="nav__text">Place</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="nav__mood">
+        <i class='bx bx-moon nav__mood--icon'></i>
+        <!-- <i class='bx bx-sun nav__mood--icon'></i> -->
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- -------------- HOME SECTION -------------- -->
+    <section id="home" class="home">
+      <img class="home__image" src="/assets/images/home1.jpg" alt="banner image">
+      <div class="home__container container grid">
+        <div class="home__content">
+          <span class="home__content--subtitle">Discover your place</span>
+          <h1 class="home__content--title">Explore The <br> Best <b>Beautiful <br> Beaches</b></h1>
+          <a href="" class="button">Explore</a>
+        </div>
+        <div class="home__social">
+          <a href="" class="home__social--link" target="_blank"><i
+              class='bx bxl-facebook-square home__social--link'></i>
+          </a>
+          <a href="" class="home__social--link" target="_blank"><i
+              class='bx bxl-linkedin-square home__social--link'></i>
+          </a>
+          <a href="" class="home__social--link" target="_blank">
+            <i class='bx bxl-github home__social--link'></i>
+          </a>
+        </div>
+        <div class="home__info">
+          <div>
+            <span class="home__info--title">5 best places to visit</span>
+            <a href="" class="button button--flex button--link home__info--button">
+              <span>More</span>
+              <i class='bx bx-right-arrow-alt'></i>
+            </a>
+          </div>
+          <div class="home__info--overlay">
+            <img class="home__info--image" src="/assets/images/home2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------- ABOUT SECTION -------------- -->
+    <section class="about section" id="about">
+      <div class="about__container container grid">
+
+      </div>
+    </section>
+  </main>
+
+  <!-- -------------- SWIPER JS -------------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.min.js"></script>
+
+  <!-- -------------- MAIN JS -------------- -->
+  <script src="/assets/js/main.js"></script>
+</body>
+
 </html>

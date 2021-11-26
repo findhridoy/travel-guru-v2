@@ -1,0 +1,387 @@
+/* ================== GOOGLE FONT ================== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* ================== CSS VARIABLE ================== */
+:root {
+  /* ------ colors ------ */
+  --primary-color: hsl(200, 64%, 22%);
+  --primary-alt-color: hsl(200, 64%, 15%);
+  --title-color: hsl(200, 64%, 18%);
+  --text-color: hsl(200, 24%, 35%);
+  --text-color-light: hsl(200, 8%, 60%);
+  --white-color: hsl(200, 100%, 100%);
+  --body-color: hsl(200, 100%, 99%);
+  --scroll-bar-color: hsl(200, 12%, 90%);
+  --scroll-thumb-color: hsl(200, 12%, 75%);
+  --input-color: hsl(200, 24%, 97%);
+
+  /* ------ font size ------ */
+  --biggest-font: 2.5rem;
+  --h1-font: 1.5rem;
+  --h2-font: 1.25rem;
+  --h3-font: 1rem;
+  --normal-font: 0.938rem;
+  --small-font: 0.813rem;
+  --smaller-font: 0.75rem;
+
+  /* ------ font family ------ */
+  --Open-Sans: "Open Sans", sans-serif;
+  --Raleway: "Raleway", sans-serif;
+
+  /* ------ font weight ------ */
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --bolder: 800;
+
+  /* ------ margenes/paddings ------ */
+  --x-0-25: 0.25rem;
+  --x-0-5: 0.5rem;
+  --x-0-75: 0.75rem;
+  --x-1: 1rem;
+  --x-1-25: 1.25rem;
+  --x-1-5: 1.5rem;
+  --x-1-75: 1.75rem;
+  --x-2: 2rem;
+  --x-2-5: 2.5rem;
+
+  /* ------ z-index ------ */
+  --z-10: 10;
+  --z-100: 100;
+
+  /* ------ transition ------ */
+  --transition: 0.4s;
+
+  /* ------ transition ------ */
+  --header-height: 3rem;
+}
+@media screen and (min-width: 968px) {
+  :root {
+    /* ------ font size ------ */
+    --biggest-font: 4rem;
+    --h1-font: 2.25rem;
+    --h2-font: 1.75rem;
+    --h3-font: 1.25rem;
+    --normal-font: 1rem;
+    --small-font: 0.875rem;
+    --smaller-font: 0.813rem;
+  }
+}
+
+/* ================== BASE CSS ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: var(--Open-Sans);
+  font-size: var(--normal-font);
+  margin: var(--header-height) 0 0 0;
+}
+h1,
+h2,
+h3 {
+  /* color: var(--title-color); */
+  font-weight: var(--semi-bold);
+  font-family: var(--Raleway);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button,
+input {
+  border: none;
+  font-family: var(--Open-Sans);
+  font-size: var(--normal-font);
+}
+button {
+  cursor: pointer;
+}
+input {
+  outline: none;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+/* ================== REUSEABLE CSS ================== */
+.section {
+  padding: 4.5rem 0 2.5rem;
+}
+.container {
+  max-width: 960px;
+  margin-left: var(--x-1);
+  margin-right: var(--x-1);
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ================== BUTTONS CSS ================== */
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--white-color);
+  font-weight: var(--semi-bold);
+  transition: var(--transition);
+}
+.button:hover {
+  background-color: var(--primary-alt-color);
+}
+.button--flex {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25rem;
+}
+.button--link {
+  padding: 0;
+  background: none;
+}
+.button--link:hover {
+  background: none;
+}
+/* ================== HEADER ================== */
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  /* box-shadow: 0 -1px 12px hsla(200, 50%, 15%, 0.15); */
+  /* height: 3rem; */
+  padding: 0.5rem 0;
+  background-color: transparent;
+  z-index: var(--z-100);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+.logo {
+  width: 75px;
+}
+.nav__mood--icon {
+  font-size: var(--h3-font);
+  font-weight: var(--normal-font);
+  cursor: pointer;
+  color: var(--white-color);
+}
+/* For small, medium devices */
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -1px 12px hsla(210, 2%, 36%, 0.15);
+    width: 100%;
+    height: 3.5rem;
+    display: none;
+    align-content: center;
+    border-radius: 10px 10px 0 0;
+    z-index: var(--z-100);
+    background: var(--white-color);
+  }
+  .show-navMenu {
+    display: grid;
+  }
+  .show-navMenu .nav__link {
+    color: var(--primary-color);
+  }
+}
+.nav__list,
+.nav__link {
+  display: flex;
+}
+.nav__list {
+  justify-content: space-around;
+  /* display: none; */
+}
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  font-weight: var(--semi-bold);
+  row-gap: 4px;
+  transition: var(--transition);
+}
+.nav__icon {
+  font-size: var(--h2-font);
+}
+.nav__text {
+  font-size: var(--smaller-font);
+  color: var(--white-color);
+}
+
+/* Nav Link Hover */
+.nav__link:hover {
+  color: var(--primary-alt-color);
+}
+
+/* Change background header */
+.scroll-header {
+  background-color: var(--white-color);
+}
+.scroll-header .nav__mood--icon {
+  color: var(--primary-color);
+}
+.scroll-header .nav__text {
+  color: var(--primary-color);
+}
+/* Active link */
+/* ================== HOME ================== */
+.home__image {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  object-position: 83%;
+}
+.home__container {
+  position: relative;
+  height: calc(100vh - var(--header-height));
+  align-content: center;
+  row-gap: 3rem;
+}
+.home__content,
+.home__social--link,
+.home__info,
+.button {
+  color: var(--white-color);
+}
+
+.home__content--subtitle {
+  font-weight: var(--semi-bold);
+  margin-bottom: var(--x-0-75);
+  display: block;
+}
+.home__content--title {
+  margin-bottom: var(--x-2-5);
+  font-size: var(--biggest-font);
+  font-weight: var(--medium);
+}
+.home__social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.home__social--link {
+  font-size: var(--h2-font);
+  width: max-content;
+}
+.home__info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  background-color: var(--primary-color);
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  padding: 1.5rem 1rem;
+  width: 228px;
+}
+.home__info--title {
+  display: block;
+  font-size: var(--small-font);
+  font-weight: var(--semi-bold);
+  margin-bottom: var(--x-0-75);
+}
+.home__info--button {
+  font-size: var(--small-font);
+}
+.home__info--overlay {
+  overflow: hidden;
+}
+.home__info--image {
+  width: 125px;
+  transition: var(--transition);
+}
+.home__info--image:hover {
+  transform: scale(1.1);
+}
+
+/* ================== MEDIA QUERIES ================== */
+/* For Small Devices */
+@media screen and (max-width: 320px) {
+  .nav__text {
+    display: none;
+  }
+  .home__info {
+    width: 190px;
+    padding: 1rem;
+  }
+}
+
+/* For Medium Devices */
+@media screen and (min-width: 576px) {
+  .container {
+    margin-left: var(--x-1-75);
+    margin-right: var(--x-1-75);
+  }
+  .logo {
+    width: 85px;
+  }
+  .nav__list {
+    justify-content: center;
+    column-gap: 4rem;
+  }
+  .home__social {
+    flex-direction: row;
+    column-gap: 1.5rem;
+    margin-bottom: var(--x-2-5);
+    align-self: flex-end;
+  }
+  .home__info {
+    margin-bottom: var(--x-2-5);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .logo {
+    width: 90px;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__list {
+    column-gap: 2.5rem;
+  }
+  .nav__text {
+    font-size: var(--small-font);
+  }
+  .home__container {
+    grid-template-rows: 1.8fr 0.5fr;
+  }
+  .home__content {
+    align-self: flex-end;
+  }
+}
+/* For Large Devices */
+@media screen and (min-width: 1024px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
+/* ================== CSS VARIABLE ================== */
