@@ -52,7 +52,11 @@
   /* ------ transition ------ */
   --transition: 0.4s;
 
-  /* ------ transition ------ */
+  /* ------ images hidden, scale ------ */
+  --img-hidden: hidden;
+  --img-scale: scale(1.1);
+
+  /* ------ header height ------ */
   --header-height: 3rem;
 }
 @media screen and (min-width: 968px) {
@@ -116,7 +120,14 @@ video {
 }
 /* ================== REUSEABLE CSS ================== */
 .section {
-  padding: 4.5rem 0 2.5rem;
+  padding: 4.5rem 0 4rem;
+}
+.section__title {
+  font-size: var(--h2-font);
+  color: var(--title-color);
+  text-transform: capitalize;
+  margin-bottom: var(--x-2);
+  text-align: center;
 }
 .container {
   max-width: 960px;
@@ -303,16 +314,49 @@ video {
   font-size: var(--small-font);
 }
 .home__info--overlay {
-  overflow: hidden;
+  overflow: var(--img-hidden);
 }
 .home__info--image {
   width: 125px;
   transition: var(--transition);
 }
 .home__info--image:hover {
-  transform: scale(1.1);
+  transform: var(--img-scale);
 }
 
+/* ================== ABOUT ================== */
+.about__container {
+  row-gap: 2.5rem;
+}
+.about__content {
+  text-align: center;
+}
+.about__description {
+  margin-bottom: var(--x-2);
+}
+.about__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+}
+.about__img--overlay {
+  overflow: var(--img-hidden);
+}
+.about__img--one {
+  width: 130px;
+}
+.about__img--two {
+  width: 180px;
+}
+.about__img--one,
+.about__img--two {
+  transition: var(--transition);
+}
+.about__img--one:hover,
+.about__img--two:hover {
+  transform: var(--img-scale);
+}
 /* ================== MEDIA QUERIES ================== */
 /* For Small Devices */
 @media screen and (max-width: 320px) {
@@ -368,12 +412,29 @@ video {
   .home__content {
     align-self: flex-end;
   }
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .about__content,
+  .about__title {
+    text-align: initial;
+  }
+  .about__title {
+    margin-bottom: var(--x-1-5);
+  }
 }
 /* For Large Devices */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
     margin-right: auto;
+  }
+  .about__img--one {
+    width: 230px;
+  }
+  .about__img--two {
+    width: 280px;
   }
 }
 /* ================== CSS VARIABLE ================== */
