@@ -57,7 +57,7 @@
   --img-scale: scale(1.1);
 
   /* ------ header height ------ */
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 }
 @media screen and (min-width: 968px) {
   :root {
@@ -120,7 +120,7 @@ video {
 }
 /* ================== REUSEABLE CSS ================== */
 .section {
-  padding: 4.5rem 0 4rem;
+  padding: 5.5rem 0 2.5rem;
 }
 .section__title {
   font-size: var(--h2-font);
@@ -169,11 +169,9 @@ video {
   width: 100%;
   left: 0;
   top: 0;
-  /* box-shadow: 0 -1px 12px hsla(200, 50%, 15%, 0.15); */
-  /* height: 3rem; */
-  padding: 0.5rem 0;
   background-color: transparent;
   z-index: var(--z-100);
+  padding: 0.5rem 0;
 }
 .nav {
   display: flex;
@@ -192,19 +190,23 @@ video {
 }
 /* For small, medium devices */
 @media screen and (max-width: 767px) {
+  .header {
+    padding: 0;
+  }
   .nav__menu {
     position: fixed;
     bottom: 0;
     left: 0;
     box-shadow: 0 -1px 12px hsla(210, 2%, 36%, 0.15);
     width: 100%;
-    height: 3.5rem;
+    height: var(--header-height);
     display: none;
     align-content: center;
     border-radius: 10px 10px 0 0;
     z-index: var(--z-100);
     background: var(--white-color);
   }
+
   .show-navMenu {
     display: grid;
   }
@@ -218,7 +220,6 @@ video {
 }
 .nav__list {
   justify-content: space-around;
-  /* display: none; */
 }
 .nav__link {
   flex-direction: column;
@@ -243,6 +244,7 @@ video {
 /* Change background header */
 .scroll-header {
   background-color: var(--white-color);
+  box-shadow: 0 -1px 12px hsla(200, 50%, 15%, 0.15);
 }
 .scroll-header .nav__mood--icon {
   color: var(--primary-color);
@@ -290,7 +292,7 @@ video {
   row-gap: 1rem;
 }
 .home__social--link {
-  font-size: var(--h2-font);
+  font-size: var(--h3-font);
   width: max-content;
 }
 .home__info {
@@ -357,6 +359,37 @@ video {
 .about__img--two:hover {
   transform: var(--img-scale);
 }
+
+/* ================== DISCOVER ================== */
+.discover__card {
+  position: relative;
+  width: 220px;
+  overflow: var(--img-hidden);
+}
+.discover__card--content {
+  position: absolute;
+  left: 1rem;
+  bottom: 1.5rem;
+}
+.discover__card--title,
+.discover__card--description {
+  color: var(--white-color);
+}
+.discover__card--title {
+  font-size: var(--h3-font);
+  margin-bottom: var(--x-0-25);
+}
+.discover__card--description {
+  display: block;
+  font-size: var(--smaller-font);
+}
+.discover__card--image {
+  transition: var(--transition);
+}
+.discover__card--image:hover {
+  transform: var(--img-scale);
+}
+
 /* ================== MEDIA QUERIES ================== */
 /* For Small Devices */
 @media screen and (max-width: 320px) {
@@ -394,6 +427,9 @@ video {
 }
 
 @media screen and (min-width: 767px) {
+  .section {
+    padding: 7rem 0 2rem;
+  }
   .logo {
     width: 90px;
   }
@@ -423,6 +459,12 @@ video {
   .about__title {
     margin-bottom: var(--x-1-5);
   }
+  .discover__container {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+  }
 }
 /* For Large Devices */
 @media screen and (min-width: 1024px) {
@@ -430,19 +472,26 @@ video {
     margin-left: auto;
     margin-right: auto;
   }
+  .home__container {
+    grid-template-rows: 2fr 0.5fr;
+  }
   .about__img--one {
     width: 230px;
   }
   .about__img--two {
     width: 280px;
   }
+  .discover__container {
+    width: 700px;
+  }
+  .discover__card {
+    width: 237px;
+  }
+  .discover__card--content {
+    left: 1.5rem;
+    bottom: 2rem;
+  }
+  .discover__card--title {
+    font-size: var(--h2-font);
+  }
 }
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
-/* ================== CSS VARIABLE ================== */
