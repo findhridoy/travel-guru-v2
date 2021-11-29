@@ -1,187 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- -------------- FAVICON ICON -------------- -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.png"
+      type="image/x-icon"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- -------------- FAVICON ICON -------------- -->
-  <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon" />
+    <!-- -------------- BOXICONS -------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
 
-  <!-- -------------- BOXICONS -------------- -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <!-- -------------- SWIPER CSS -------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.css"
+    />
 
-  <!-- -------------- SWIPER CSS -------------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.css" />
+    <!-- -------------- STYLE CSS -------------- -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-  <!-- -------------- STYLE CSS -------------- -->
-  <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- -------------- RESPONSIVE CSS -------------- -->
+    <title>Travel Guru</title>
+  </head>
 
-  <!-- -------------- RESPONSIVE CSS -------------- -->
-  <title>Travel Guru</title>
-</head>
-
-<body>
-  <header id="header" class="header">
-    <nav class="nav container">
-      <div class="logo">
-        <a href="#home"><img src="/assets/images/Logo.png" alt="Logo" /></a>
-      </div>
-      <div class="nav__menu" id="nav__menu">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#home">
-              <i class="bx bx-home-alt nav__icon"></i>
-              <span class="nav__text">Home</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#about">
-              <i class="bx bx-user nav__icon"></i>
-              <span class="nav__text">About</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#discover">
-              <i class="bx bx-podcast nav__icon"></i>
-              <span class="nav__text">Discover</span>
-            </a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#place">
-              <i class="bx bx-current-location nav__icon"></i>
-              <span class="nav__text">Place</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="nav__mood">
-        <i class="bx bx-moon nav__mood--icon"></i>
-        <!-- <i class='bx bx-sun nav__mood--icon'></i> -->
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- -------------- HOME SECTION -------------- -->
-    <section id="home" class="home">
-      <img class="home__image" src="/assets/images/home1.jpg" alt="banner image" />
-      <div class="home__container container grid">
-        <div class="home__content">
-          <span class="home__content--subtitle">Discover your place</span>
-          <h1 class="home__content--title">
-            Explore The <br />
-            Best
-            <b>Beautiful <br />
-              Beaches</b>
-          </h1>
-          <a href="" class="button">Explore</a>
+  <body>
+    <header id="header" class="header">
+      <nav class="nav container">
+        <div class="logo">
+          <a href="#home"><img src="/assets/images/Logo.png" alt="Logo" /></a>
         </div>
-        <div class="home__social">
-          <a href="" class="home__social--link" target="_blank"><i
-              class="bx bxl-facebook-square home__social--link"></i>
-          </a>
-          <a href="" class="home__social--link" target="_blank"><i
-              class="bx bxl-linkedin-square home__social--link"></i>
-          </a>
-          <a href="" class="home__social--link" target="_blank">
-            <i class="bx bxl-github home__social--link"></i>
-          </a>
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#home">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#about">
+                <i class="bx bx-user nav__icon"></i>
+                <span class="nav__text">About</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#discover">
+                <i class="bx bx-podcast nav__icon"></i>
+                <span class="nav__text">Discover</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#place">
+                <i class="bx bx-current-location nav__icon"></i>
+                <span class="nav__text">Place</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="home__info">
-          <div>
-            <span class="home__info--title">5 best places to visit</span>
-            <a href="" class="button button--flex button--link home__info--button">
-              <span>More</span>
-              <i class="bx bx-right-arrow-alt"></i>
+        <div class="nav__mood">
+          <i class="bx bx-moon nav__mood--icon"></i>
+          <!-- <i class='bx bx-sun nav__mood--icon'></i> -->
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- -------------- HOME SECTION -------------- -->
+      <section id="home" class="home">
+        <img
+          class="home__image"
+          src="/assets/images/home1.jpg"
+          alt="banner image"
+        />
+        <div class="home__container container grid">
+          <div class="home__content">
+            <span class="home__content--subtitle">Discover your place</span>
+            <h1 class="home__content--title">
+              Explore The <br />
+              Best
+              <b
+                >Beautiful <br />
+                Beaches</b
+              >
+            </h1>
+            <a href="" class="button">Explore</a>
+          </div>
+          <div class="home__social">
+            <a href="" class="home__social--link" target="_blank"
+              ><i class="bx bxl-facebook-square home__social--link"></i>
+            </a>
+            <a href="" class="home__social--link" target="_blank"
+              ><i class="bx bxl-linkedin-square home__social--link"></i>
+            </a>
+            <a href="" class="home__social--link" target="_blank">
+              <i class="bx bxl-github home__social--link"></i>
             </a>
           </div>
-          <div class="home__info--overlay">
-            <img class="home__info--image" src="/assets/images/home2.jpg" alt="" />
+          <div class="home__info">
+            <div>
+              <span class="home__info--title">5 best places to visit</span>
+              <a
+                href=""
+                class="button button--flex button--link home__info--button"
+              >
+                <span>More</span>
+                <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+            <div class="home__info--overlay">
+              <img
+                class="home__info--image"
+                src="/assets/images/home2.jpg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- -------------- ABOUT SECTION -------------- -->
-    <section class="about section" id="about">
-      <div class="about__container container grid">
-        <div class="about__content">
-          <h2 class="section__title about__title">
-            More Information <br />
-            About The Best Beaches
-          </h2>
-          <p class="about__description">
-            You can find the most beautiful and pleasant places at the best
-            prices with special discounts, you choose the place we will guide
-            you all the way to wait, get your place now.
+      <!-- -------------- ABOUT SECTION -------------- -->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <div class="about__content">
+            <h2 class="section__title about__title">
+              More Information <br />
+              About The Best Beaches
+            </h2>
+            <p class="about__description">
+              You can find the most beautiful and pleasant places at the best
+              prices with special discounts, you choose the place we will guide
+              you all the way to wait, get your place now.
+            </p>
+            <a href="" class="button">Reserve a Place</a>
+          </div>
+          <div class="about__images">
+            <div class="about__img--overlay">
+              <img
+                class="about__img--one"
+                src="/assets/images/about1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="about__img--overlay">
+              <img
+                class="about__img--two"
+                src="/assets/images/about2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- DISCOVER SECTION -------------- -->
+      <section class="discover section" id="discover">
+        <h2 class="section__title">
+          Discover the most <br />
+          attractive places
+        </h2>
+        <div class="discover__container container swiper">
+          <div class="swiper-wrapper">
+            <!-- -------------- DISCOVER 1 -------------- -->
+            <div class="discover__card swiper-slide">
+              <img
+                class="discover__card--image"
+                src="/assets/images/discover1.jpg"
+                alt="discover image"
+              />
+              <div class="discover__card--content">
+                <h2 class="discover__card--title">Bali</h2>
+                <span class="discover__card--description">
+                  24 tours available
+                </span>
+              </div>
+            </div>
+
+            <!-- -------------- DISCOVER 2 -------------- -->
+            <div class="discover__card swiper-slide">
+              <img
+                class="discover__card--image"
+                src="/assets/images/discover2.jpg"
+                alt="discover image"
+              />
+              <div class="discover__card--content">
+                <h2 class="discover__card--title">Hawaii</h2>
+                <span class="discover__card--description">
+                  15 tours available
+                </span>
+              </div>
+            </div>
+
+            <!-- -------------- DISCOVER 3 -------------- -->
+            <div class="discover__card swiper-slide">
+              <img
+                class="discover__card--image"
+                src="/assets/images/discover3.jpg"
+                alt="discover image"
+              />
+              <div class="discover__card--content">
+                <h2 class="discover__card--title">Hvar</h2>
+                <span class="discover__card--description">
+                  18 tours available
+                </span>
+              </div>
+            </div>
+
+            <!-- -------------- DISCOVER 4 -------------- -->
+            <div class="discover__card swiper-slide">
+              <img
+                class="discover__card--image"
+                src="/assets/images/discover4.jpg"
+                alt="discover image"
+              />
+              <div class="discover__card--content">
+                <h2 class="discover__card--title">Whitehaven</h2>
+                <span class="discover__card--description">
+                  32 tours available
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- DISCOVER SECTION -------------- -->
+      <section class="experience section">
+        <h2 class="section__title">
+          With Our Experience <br />
+          We Will Serve You
+        </h2>
+
+        <div class="experince__container container grid">
+          <div class="experience__content grid">
+            <div class="experience__data">
+              <h2 class="experience__number">20</h2>
+              <span class="experience__description">Year Experience</span>
+            </div>
+
+            <div class="experience__data">
+              <h2 class="experience__number">75</h2>
+              <span class="experience__description">Complete tours</span>
+            </div>
+
+            <div class="experience__data">
+              <h2 class="experience__number">750+</h2>
+              <span class="experience__description">Tourist Destination</span>
+            </div>
+          </div>
+
+          <div class="experience__image grid">
+            <div class="experience__img--overlay">
+              <img
+                src="/assets/images/experience1.jpg"
+                alt=""
+                class="experience__img--one"
+              />
+            </div>
+            <div class="experience__img--overlay">
+              <img
+                src="/assets/images/experience2.jpg"
+                alt=""
+                class="experience__img--two"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- VIDEO SECTION -------------- -->
+      <section class="video__section section">
+        <h2 class="section__title">Video Tour</h2>
+
+        <div class="video__container container">
+          <p class="video__description">
+            Find out more with our video of the most beautiful and pleasant
+            places for you and your family.
           </p>
-          <a href="" class="button">Reserve a Place</a>
-        </div>
-        <div class="about__images">
-          <div class="about__img--overlay">
-            <img class="about__img--one" src="/assets/images/about1.jpg" alt="" />
-          </div>
-          <div class="about__img--overlay">
-            <img class="about__img--two" src="/assets/images/about2.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- -------------- DISCOVER SECTION -------------- -->
-    <section class="discover section" id="discover">
-      <h2 class="section__title">Discover the most <br> attractive places</h2>
-      <div class="discover__container container swiper">
-        <div class="swiper-wrapper">
-          <!-- -------------- DISCOVER 1 -------------- -->
-          <div class="discover__card swiper-slide">
-            <img class="discover__card--image" src="/assets/images/discover1.jpg" alt="discover image">
-            <div class="discover__card--content">
-              <h2 class="discover__card--title">Bali</h2>
-              <span class="discover__card--description">24 tours available</span>
-            </div>
-          </div>
-
-          <!-- -------------- DISCOVER 2 -------------- -->
-          <div class="discover__card swiper-slide">
-            <img class="discover__card--image" src="/assets/images/discover2.jpg" alt="discover image">
-            <div class="discover__card--content">
-              <h2 class="discover__card--title">Hawaii</h2>
-              <span class="discover__card--description">15 tours available</span>
-            </div>
-          </div>
-
-          <!-- -------------- DISCOVER 3 -------------- -->
-          <div class="discover__card swiper-slide">
-            <img class="discover__card--image" src="/assets/images/discover3.jpg" alt="discover image">
-            <div class="discover__card--content">
-              <h2 class="discover__card--title">Hvar</h2>
-              <span class="discover__card--description">18 tours available</span>
-            </div>
-          </div>
-
-          <!-- -------------- DISCOVER 4 -------------- -->
-          <div class="discover__card swiper-slide">
-            <img class="discover__card--image" src="/assets/images/discover4.jpg" alt="discover image">
-            <div class="discover__card--content">
-              <h2 class="discover__card--title">Whitehaven</h2>
-              <span class="discover__card--description">32 tours available</span>
-            </div>
+          <div class="video__content">
+            <video id="video-file">
+              <source src="/assets/video/video.mp4" type="video/mp4" />
+            </video>
+            <button class="button video__button button--flex" id="video-button">
+              <i
+                class="bx bx-play video__button--icon"
+                id="video-button-icon"
+              ></i>
+            </button>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- -------------- SWIPER JS -------------- -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.min.js"></script>
+      <!-- -------------- PLACES SECTION -------------- -->
+      <section class="place__section section" id="place">
+        <h2 class="section__title">Choose Your Place</h2>
+        <div class="place__container container grid">
+          <!-- -------------- Place Card 1 -------------- -->
+          <div class="place__card">
+            <img src="/assets/images/place1.jpg" alt="" class="place__image" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="bx bx-star place__rating--icon"></i>
+                <span class="place__rating--number">4.8</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__data-title">Bali</h3>
+                <span class="place__data--subtitle">Indonesia</span>
+                <span class="place__data--price">$2499</span>
+              </div>
+            </div>
+            <button class="button place__button button--flex">
+              <i class="bx bx-right-arrow-alt place__button--icon"></i>
+            </button>
+          </div>
 
-  <!-- -------------- MAIN JS -------------- -->
-  <script src="/assets/js/main.js"></script>
-</body>
+          <!-- -------------- Place Card 2 -------------- -->
+          <div class="place__card">
+            <img src="/assets/images/place2.jpg" alt="" class="place__image" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="bx bx-star place__rating--icon"></i>
+                <span class="place__rating--number">5.0</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__data-title">Bora Bora</h3>
+                <span class="place__data--subtitle">Polinesia</span>
+                <span class="place__data--price">$1599</span>
+              </div>
+            </div>
+            <button class="button place__button button--flex">
+              <i class="bx bx-right-arrow-alt place__button--icon"></i>
+            </button>
+          </div>
 
+          <!-- -------------- Place Card 3 -------------- -->
+          <div class="place__card">
+            <img src="/assets/images/place3.jpg" alt="" class="place__image" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="bx bx-star place__rating--icon"></i>
+                <span class="place__rating--number">4.9</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__data-title">Hawaii</h3>
+                <span class="place__data--subtitle">EE.UU</span>
+                <span class="place__data--price">$3499</span>
+              </div>
+            </div>
+            <button class="button place__button button--flex">
+              <i class="bx bx-right-arrow-alt place__button--icon"></i>
+            </button>
+          </div>
+
+          <!-- -------------- Place Card 4 -------------- -->
+          <div class="place__card">
+            <img src="/assets/images/place4.jpg" alt="" class="place__image" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="bx bx-star place__rating--icon"></i>
+                <span class="place__rating--number">4.8</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__data-title">Whitehaven</h3>
+                <span class="place__data--subtitle">Australia</span>
+                <span class="place__data--price">$2499</span>
+              </div>
+            </div>
+            <button class="button place__button button--flex">
+              <i class="bx bx-right-arrow-alt place__button--icon"></i>
+            </button>
+          </div>
+
+          <!-- -------------- Place Card 5 -------------- -->
+          <div class="place__card">
+            <img src="/assets/images/place5.jpg" alt="" class="place__image" />
+            <div class="place__content">
+              <span class="place__rating">
+                <i class="bx bx-star place__rating--icon"></i>
+                <span class="place__rating--number">4.8</span>
+              </span>
+              <div class="place__data">
+                <h3 class="place__data-title">Hvar</h3>
+                <span class="place__data--subtitle">Croacia</span>
+                <span class="place__data--price">$1999</span>
+              </div>
+            </div>
+            <button class="button place__button button--flex">
+              <i class="bx bx-right-arrow-alt place__button--icon"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- SUBSCRIBE SECTION -------------- -->
+      <section class="subscribe__section section">
+        <div class="subscribe__bg">
+          <div class="subscribe__container container">
+            <h2 class="subscribe__title section__title">
+              Subscribe Our <br />
+              Newsletter
+            </h2>
+            <p class="subscribe__description">
+              Subscribe to our newsletter and get a special 30% discount.
+            </p>
+
+            <form action="" class="subscribe__form">
+              <input
+                type="text"
+                placeholder="Enter your email..."
+                class="subscribe__input"
+              />
+              <button class="button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------- SPONSOR SECTION -------------- -->
+      <section class="sponsor__section section">
+        <div class="sponsor__container container grid">
+          <div class="sponsor__content">
+            <img
+              src="/assets/images/sponsors1.png"
+              alt=""
+              class="sponsor__image"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="/assets/images/sponsors3.png"
+              alt=""
+              class="sponsor__image"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="/assets/images/sponsors3.png"
+              alt=""
+              class="sponsor__image"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="/assets/images/sponsors4.png"
+              alt=""
+              class="sponsor__image"
+            />
+          </div>
+          <div class="sponsor__content">
+            <img
+              src="/assets/images/sponsors5.png"
+              alt=""
+              class="sponsor__image"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- -------------- SWIPER JS -------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.0/swiper-bundle.min.js"></script>
+
+    <!-- -------------- MAIN JS -------------- -->
+    <script src="/assets/js/main.js"></script>
+  </body>
 </html>

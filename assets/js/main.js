@@ -28,3 +28,28 @@ var swiper = new Swiper(".discover__container", {
     slideShadows: false,
   },
 });
+
+/**======== VIDEO ==========*/
+const videoFile = document.getElementById("video-file");
+const videoButton = document.getElementById("video-button");
+const videoButtonIcon = document.getElementById("video-button-icon");
+
+function playPause() {
+  if (videoFile.paused) {
+    videoFile.play();
+    videoButtonIcon.classList.add("bx-pause");
+    videoButtonIcon.classList.remove("bx-play");
+  } else {
+    videoFile.pause();
+    videoButtonIcon.classList.remove("bx-pause");
+    videoButtonIcon.classList.add("bx-play");
+  }
+}
+
+videoButton.addEventListener("click", playPause);
+
+function endedVideo() {
+  videoButtonIcon.classList.remove("bx-pause");
+  videoButtonIcon.classList.add("bx-play");
+}
+videoFile.addEventListener("ended", endedVideo);
