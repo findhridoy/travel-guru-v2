@@ -2,7 +2,7 @@
 const header = document.getElementById("header");
 const navMenu = document.getElementById("nav__menu");
 function changeHeaderBg() {
-  if (this.scrollY >= 70) {
+  if (this.scrollY >= 50) {
     header.classList.add("scroll-header");
     navMenu.classList.add("show-navMenu");
   } else {
@@ -53,3 +53,31 @@ function endedVideo() {
   videoButtonIcon.classList.add("bx-play");
 }
 videoFile.addEventListener("ended", endedVideo);
+
+/**======== SCROLL UP ==========*/
+const scollUp = document.getElementById("scroll--up");
+
+function showScroll() {
+  if (this.scrollY >= 200) {
+    scollUp.classList.add("show--scroll");
+  } else {
+    scollUp.classList.remove("show--scroll");
+  }
+}
+window.addEventListener("scroll", showScroll);
+
+/**======== DARK THEME ==========*/
+const icon = document.getElementById("mood--icon");
+
+function changeTheme() {
+  document.body.classList.toggle("dark--theme");
+
+  if (document.body.classList.contains("dark--theme")) {
+    icon.classList.add("bx-sun");
+    icon.classList.remove("bx-moon");
+  } else {
+    icon.classList.remove("bx-sun");
+    icon.classList.add("bx-moon");
+  }
+}
+icon.addEventListener("click", changeTheme);
